@@ -2,6 +2,7 @@
 # where to find the include files and the library for NTL.
 # You may need to add -I include_directory and -L library_directory
 # options.  For example, if NTL installed into /home/username/sw directory,
+#   on mac, use 'brew install ntl' and then find out the installed path
 # then you should replace the CXXFLAGS line below with
 # CXXFLAGS = -Wno-deprecated -I /home/username/sw/include -L /home/username/sw/lib
 #
@@ -11,7 +12,7 @@
 # NTL creates these when you install it according to NTL instructions.
 # See http://www.shoup.net/ntl for more.
 
-CXXFLAGS = -Wno-deprecated
+CXXFLAGS = -Wno-deprecated -I /usr/local/Cellar/ntl/10.5.0/include -L /usr/local/Cellar/ntl/10.5.0/lib
 
 all: sketch differ
 
